@@ -79,7 +79,7 @@ export async function runMigrations() {
     // 5. Bookings table (Final confirmed reservations)
     await client.query(`
       CREATE TABLE IF NOT EXISTS bookings (
-        id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+        id VARCHAR(100) PRIMARY KEY,
         hold_id UUID UNIQUE REFERENCES holds(id),
         user_id VARCHAR(100) NOT NULL,
         hotel_id UUID NOT NULL REFERENCES hotels(id),

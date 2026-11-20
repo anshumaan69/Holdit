@@ -1,6 +1,7 @@
 {
   "name": "holdit",
   "version": "1.0.0",
+  "type": "module",
   "description": "Production-grade AI Trip Planner with Zero Double-Booking Guarantee (Node.js, Redis Lua, Qdrant, PostgreSQL)",
   "main": "dist/index.js",
   "scripts": {
