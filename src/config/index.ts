@@ -20,7 +20,7 @@ export const config = {
     apiKey: process.env.QDRANT_API_KEY || undefined,
     collectionName: "holdit_semantic_cache",
     vectorSize: 128, // Using 128-dim embeddings for lightweight semantic matching
-    similarityThreshold: 0.88,
+    similarityThreshold: parseFloat(process.env.QDRANT_SIMILARITY_THRESHOLD || "0.80"),
   },
 
   llm: {
